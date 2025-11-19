@@ -1,0 +1,7 @@
+# デフォルトの無視対象ファイル
+/shelf/
+.idea/
+# 環境に依存する Maven ホームディレクトリのパス
+/mavenHomeManager.xml
+
+data.json
