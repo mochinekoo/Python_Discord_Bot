@@ -7,7 +7,7 @@ from discord.ext import commands
 from discord import app_commands
 import asyncio
 
-filename = "../../data.json"
+filename = "data.json"
 intents = discord.Intents.default()
 client = commands.Bot(command_prefix="!", intents=intents)
 
@@ -29,7 +29,8 @@ async def on_ready():
     await client.tree.sync()
 
 async def main():
-    await client.load_extension("command.TestCommand")
+    await client.load_extension("mochineko.discord_bot.command.TestCommand")
     await client.start(data["bot_token"])
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
